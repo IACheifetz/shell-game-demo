@@ -32,9 +32,9 @@ function statusDisplay() {
     incorrectEl.textContent = total - correct;
 }
 function resetStatus() {
-    correctEl.value = correctEl.defaultValue;
-    incorrectEl.textContent = '0';
-    totalEl.textContent = '0';
+    correct = '0';
+    //incorrectEl.textContent = '0';
+    total = '0';
 
 }
 
@@ -60,6 +60,7 @@ function handleGuess(correctSpot, userGuess) {
     } else {
         cupThree.src = '/assets/cupgame2.png';
     }
+
     statusDisplay();
 }
 // set event listeners 
