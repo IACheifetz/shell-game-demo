@@ -47,7 +47,6 @@ function getRandomCup(arr) {
 
 function handleGuess(correctSpot, userGuess) {
     resetCups();
-    statusDisplay();
     total++;
 
     if (correctSpot === userGuess) {
@@ -61,6 +60,7 @@ function handleGuess(correctSpot, userGuess) {
     } else {
         cupThree.src = '/assets/cupgame2.png';
     }
+    statusDisplay();
 }
 // set event listeners 
 
