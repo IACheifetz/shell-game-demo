@@ -3,6 +3,8 @@ const btnOne = document.getElementById('cupOneBtn');
 const btnTwo = document.getElementById('cupTwoBtn');
 const btnThree = document.getElementById('cupThreeBtn');
 
+const resetBtn = document.getElementById('resetButton');
+
 const cupOne = document.getElementById('cup-one');
 const cupTwo = document.getElementById('cup-two');
 const cupThree = document.getElementById('cup-three');
@@ -10,6 +12,10 @@ const cupThree = document.getElementById('cup-three');
 const correctEl = document.getElementById('correct');
 const incorrectEl = document.getElementById('incorrect');
 const totalEl = document.getElementById('total');
+
+const cups = [
+    0, 1, 2
+];
 // let state
 let correct = 0;
 let total = 0;
@@ -25,57 +31,63 @@ function statusDisplay() {
     totalEl.textContent = total;
     incorrectEl.textContent = total - correct;
 }
+function resetStatus() {
+    correctEl.value = correctEl.defaultValue;
+    incorrectEl.textContent = '0';
+    totalEl.textContent = '0';
+
+}
+
+function getRandomCup(arr) {
+
+    const index = Math.floor(Math.random() * cups.length);
+    
+    return arr[index];
+}
+
+function handleGuess(correctSpot, userGuess) {
+    resetCups();
+    statusDisplay();
+    total++;
+
+    if (correctSpot === userGuess) {
+        correct++;
+    }
+
+    if (correctSpot === 0) {
+        cupOne.src = '/assets/cupgame2.png';
+    } else if (correctSpot === 1) {
+        cupTwo.src = '/assets/cupgame2.png';
+    } else {
+        cupThree.src = '/assets/cupgame2.png';
+    }
+}
 // set event listeners 
 
 btnOne.addEventListener('click', () => {
-    resetCups();
-    total++;
-    const rdmCupNmb = Math.floor(Math.random() * 3);
+   
+    const correctSpot = getRandomCup(cups);
 
-    if (rdmCupNmb === 0) {
-        cupOne.src = '/assets/cupgame2.png';
-        correct++;
-    } else if (rdmCupNmb === 1) {
-        cupTwo.src = '/assets/cupgame2.png';
-    } else {
-        cupThree.src = '/assets/cupgame2.png';
-    }
-
-    statusDisplay();
+    handleGuess(correctSpot, 0);
 });
 
 btnTwo.addEventListener('click', () => {
-    resetCups();
-    total++;
-    const rdmCupNmb = Math.floor(Math.random() * 3);
-
-    if (rdmCupNmb === 0) {
-        cupOne.src = '/assets/cupgame2.png';
-    } else if (rdmCupNmb === 1) {
-        cupTwo.src = '/assets/cupgame2.png';
-        correct++;
-    } else {
-        cupThree.src = '/assets/cupgame2.png';
-    }
     
-    statusDisplay();
+    const correctSpot = getRandomCup(cups);
+
+    handleGuess(correctSpot, 1);
 });
 
 btnThree.addEventListener('click', () => {
-    resetCups();
-    total++;
-    const rdmCupNmb = Math.floor(Math.random() * 3);
+   
+    const correctSpot = getRandomCup(cups);
 
-    if (rdmCupNmb === 0) {
-        cupOne.src = '/assets/cupgame2.png';
-    } else if (rdmCupNmb === 1) {
-        cupTwo.src = '/assets/cupgame2.png';
-    } else {
-        cupThree.src = '/assets/cupgame2.png';
-        correct++;
-    }
+    handleGuess(correctSpot, 2);
+});
 
-    statusDisplay();
+resetBtn.addEventListener('click', () =>{
+    resetStatus();
+
 });
   // get user input
   // use user input to update state 

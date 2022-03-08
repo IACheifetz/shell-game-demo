@@ -28,7 +28,8 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: black;
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(159,159,159,1) 65%, rgba(208,208,208,1) 100%);
     /*color: black;*/
 }
 
@@ -57,9 +58,9 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: black;
+    background-color: rgb(209, 209, 209);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    /*box-shadow: var(--shadow);*/
 }
 
 
@@ -88,7 +89,7 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: black;
+    background-color: rgb(54, 54, 54);
     box-shadow: var(--shadow);
 }
 
@@ -111,6 +112,7 @@ footer {
     flex-direction: column;
     color: white;
     background-color: rgb(44, 44, 44);
+    margin-right: 25px;
 }
 
 .buttons {
@@ -119,7 +121,7 @@ footer {
 }
 
 .main-section {
-    border-color: black;
+    border-color: rgb(129, 129, 129);
     background: rgb(209, 209, 209);
-    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgb(211, 211, 211) 45%, rgba(208,208,208,1) 100%);
+    background: linear-gradient(0deg, rgb(88, 88, 88) 0%, rgb(211, 211, 211) 45%, rgba(208,208,208,1) 100%);
 }
