@@ -42,7 +42,6 @@ btnOne.addEventListener('click', () => {
     }
 
     statusDisplay();
-
 });
 
 btnTwo.addEventListener('click', () => {
@@ -60,7 +59,6 @@ btnTwo.addEventListener('click', () => {
     }
     
     statusDisplay();
-
 });
 
 btnThree.addEventListener('click', () => {
@@ -78,16 +76,7 @@ btnThree.addEventListener('click', () => {
     }
 
     statusDisplay();
-
 });
-
-
-
-
-
-
-
-
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
