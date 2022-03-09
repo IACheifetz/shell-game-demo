@@ -33,8 +33,8 @@ function statusDisplay() {
 }
 function resetStatus() {
     correct = '0';
-    //incorrectEl.textContent = '0';
     total = '0';
+    //console.log(resetBtn);
 
 }
 
