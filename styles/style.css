@@ -28,7 +28,9 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background: rgb(44,44,44);
+    background: linear-gradient(0deg, rgba(44,44,44,1) 0%, rgba(159,159,159,1) 65%, rgba(208,208,208,1) 100%);
+    /*color: black;*/
 }
 
 main {
@@ -56,15 +58,16 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(209, 209, 209);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    /*box-shadow: var(--shadow);*/
 }
 
 
 h2 {
     font-size: 1.8rem;
     font-weight: bold;
+    color: rgb(177, 58, 15);
 }
 
 .gutter-right {
@@ -86,6 +89,39 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(54, 54, 54);
     box-shadow: var(--shadow);
+}
+
+.cups {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.cup {
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.Results {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgb(44, 44, 44);
+    margin-right: 25px;
+}
+
+.buttons {
+    color: white;
+    background-color: rgb(70, 70, 70);
+}
+
+.main-section {
+    border-color: rgb(129, 129, 129);
+    background: rgb(209, 209, 209);
+    background: linear-gradient(0deg, rgb(88, 88, 88) 0%, rgb(211, 211, 211) 45%, rgba(208,208,208,1) 100%);
 }
