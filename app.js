@@ -35,6 +35,9 @@ function resetStatus() {
     correct = '0';
     total = '0';
     //console.log(resetBtn);
+    correctEl.textContent = correct;
+    totalEl.textContent = total;
+    incorrectEl.textContent = total - correct;
 
 }
 
